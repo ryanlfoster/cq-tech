@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Multi step form Package</comment>
+<entry key="createdBy">vkesav</entry>
+<entry key="name">multiform-artifact-content</entry>
+<entry key="created">2013-09-18T22:38:09.173+0530</entry>
+<entry key="groupId">cq-forms</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">Custom Multi Step Form</entry>
+<entry key="description">Maven Multimodule project for Multi step form.</entry>
+<entry key="artifactId">multiform-artifact-content</entry>
+<entry key="path">/etc/packages/Custom Multi Step Form/multiform-artifact-content.zip</entry>
+</properties>

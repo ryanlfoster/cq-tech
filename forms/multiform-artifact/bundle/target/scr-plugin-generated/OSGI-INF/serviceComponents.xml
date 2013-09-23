@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" name="com.sapient.multiform.impl.HelloServiceImpl">
+        <implementation class="com.sapient.multiform.impl.HelloServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.sapient.multiform.HelloService"/>
+        </service>
+        <property name="service.pid" value="com.sapient.multiform.impl.HelloServiceImpl"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.sapient.multiform.impl.filters.LoggingFilter">
+        <implementation class="com.sapient.multiform.impl.filters.LoggingFilter"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Filter"/>
+        </service>
+        <property name="service.ranking" type="Integer" value="-700"/>
+        <property name="sling.filter.scope" value="REQUEST"/>
+        <property name="service.pid" value="com.sapient.multiform.impl.filters.LoggingFilter"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.sapient.multiform.servlets.HelloServlet">
+        <implementation class="com.sapient.multiform.servlets.HelloServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="service.description" type="String" value="Hello Servlet"/>
+        <property name="service.vendor" type="String" value="Sapient"/>
+        <property name="sling.servlet.paths" type="String" value="/sayhello"/>
+        <property name="sling.servlet.methods" type="String" value="GET"/>
+        <property name="sling.servlet.resourceTypes" type="String" value="sling/servlet/default"/>
+        <property name="service.pid" value="com.sapient.multiform.servlets.HelloServlet"/>
+    </scr:component>
+</components>

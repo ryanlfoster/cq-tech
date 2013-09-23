@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" name="com.sapient.multiform.impl.HelloServiceImpl">
+        <implementation class="com.sapient.multiform.impl.HelloServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.sapient.multiform.HelloService"/>
+        </service>
+        <property name="service.pid" value="com.sapient.multiform.impl.HelloServiceImpl" private="false"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.sapient.multiform.impl.filters.LoggingFilter">
+        <implementation class="com.sapient.multiform.impl.filters.LoggingFilter"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Filter"/>
+        </service>
+        <property name="service.ranking" type="Integer" value="-700" private="false"/>
+        <property name="sling.filter.scope" value="REQUEST" private="false"/>
+        <property name="service.pid" value="com.sapient.multiform.impl.filters.LoggingFilter" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.sapient.multiform.servlets.HelloServlet">
+        <implementation class="com.sapient.multiform.servlets.HelloServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="service.description" type="String" value="Hello Servlet" private="false"/>
+        <property name="service.vendor" type="String" value="Sapient" private="false"/>
+        <property name="sling.servlet.paths" type="String" value="/sayhello" private="false"/>
+        <property name="sling.servlet.methods" type="String" value="GET" private="false"/>
+        <property name="sling.servlet.resourceTypes" type="String" value="sling/servlet/default" private="false"/>
+        <property name="service.pid" value="com.sapient.multiform.servlets.HelloServlet" private="false"/>
+    </scr:component>
+</components>

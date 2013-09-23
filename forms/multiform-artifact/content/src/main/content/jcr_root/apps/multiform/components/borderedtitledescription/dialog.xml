@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}800"
+    title="Title and Description"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Basic Details">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldDescription="Title"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <zdescription
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        fieldDescription="Content"
+                        fieldLabel="Content"
+                        height="{Long}500"
+                        name="./description"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <spellcheck
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <inserttooltip
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <tableStyles jcr:primaryType="cq:WidgetCollection">
+                                    <table
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="tableStyle"
+                                        text="Table Styles"/>
+                                </tableStyles>
+                            </table>
+                            <insertpdf
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </zdescription>
+                    <requiredborder
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="select border type"
+                        fieldLabel="Border Type"
+                        name="./requiredBorder"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <bordered
+                                jcr:primaryType="nt:unstructured"
+                                text="Bordered Component"
+                                value="bordered"/>
+                            <borderless
+                                jcr:primaryType="nt:unstructured"
+                                text="Borderless Component"
+                                value="borderless"/>
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value="none"/>
+                            <terminatedplans
+                                jcr:primaryType="nt:unstructured"
+                                text="Terminated Plans"
+                                value="terminatedplans"/>
+                            <primarycarephysician
+                                jcr:primaryType="nt:unstructured"
+                                text="Primary Care Physician"
+                                value="primarycarephysician"/>
+                        </options>
+                    </requiredborder>
+                    <linkonename
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Related Link 1 Name"
+                        fieldLabel="Related Link 1 Name"
+                        name="./linkOneName"
+                        xtype="textfield"/>
+                    <linkoneurl
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Related Link 1 Url"
+                        fieldLabel="Related Link 1 Url"
+                        name="./linkOneUrl"
+                        xtype="pathfield"/>
+                    <linktwoname
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Related Link 2 Name"
+                        fieldLabel="Related Link 2 Name"
+                        name="./linkTwoName"
+                        xtype="textfield"/>
+                    <linktwourl
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Related Link 2 Url"
+                        fieldLabel="Related Link 2 Url"
+                        name="./linkTwoUrl"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
