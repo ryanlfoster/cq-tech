@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+// Sample unit test case
 public class SimpleUnitTest {
 
     @Test
