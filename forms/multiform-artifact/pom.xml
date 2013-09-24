@@ -108,65 +108,7 @@
                 <version>4.8.1</version>
                 <scope>test</scope>
             </dependency>
-            
-            <!-- CUSTOM Dependencies -->
-            <dependency>
-                <groupId>org.apache.sling</groupId>
-                <artifactId>org.apache.sling.jcr.jcr-wrapper</artifactId>
-                <version>2.0.0</version>
-                <type>bundle</type>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.sling</groupId>
-                <artifactId>org.apache.sling.api</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>com.day.cq</groupId>
-                <artifactId>cq-commons</artifactId>
-                <version>5.5.0</version>
-                <type>bundle</type>
-            </dependency>
-            <dependency>
-                <groupId>com.day.cq.wcm</groupId>
-                <artifactId>cq-wcm-commons</artifactId>
-                <version>5.4.2</version>
-                <type>bundle</type>
-            </dependency>
-            <dependency>
-                <groupId>com.day.cq.wcm</groupId>
-                <artifactId>cq-wcm-api</artifactId>
-                <version>5.5.0</version>
-                <type>bundle</type>
-            </dependency>
-            <dependency>
-                <groupId>com.day.commons</groupId>
-                <artifactId>day-commons-jstl</artifactId>
-                <version>1.1.4</version>
-                <type>bundle</type>
-            </dependency>
-            <dependency>
-                <groupId>com.day.cq.wcm</groupId>
-                <artifactId>cq-wcm-taglib</artifactId>
-                <version>5.4.0</version>
-                <type>bundle</type>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.sling</groupId>
-                <artifactId>org.apache.sling.scripting.jsp.taglib</artifactId>
-                <version>2.2.0</version>
-                <type>bundle</type>
-            </dependency>
-            <!-- <dependency>
-                <groupId>com.adobe.granite</groupId>
-                <artifactId>com.adobe.granite.xssprotection</artifactId>
-            </dependency> -->
-            
-            <!-- <dependency>
-                <groupId>com.day.cq.wcm</groupId>
-                <artifactId>cq-wcm-core</artifactId>
-    com.day.cq.wcm.core.components
-            </dependency> -->
-                        
+
             <dependency>
                 <groupId>com.day.cq.wcm</groupId>
                 <artifactId>cq-wcm-api</artifactId>
@@ -178,10 +120,7 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>3.1</version>
             </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

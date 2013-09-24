@@ -21,6 +21,7 @@ import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 public class HelloServlet extends SlingAllMethodsServlet {
     @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
+        request.getParameter("");
         response.setContentType("text/plain");
         response.getOutputStream().print("DDDDDDDDDDDDDD");
     }

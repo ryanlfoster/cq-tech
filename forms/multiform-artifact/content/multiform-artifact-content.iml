@@ -9,6 +9,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="multiform-artifact-bundle" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.api:2.2.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.5.10" level="project" />
   </component>
 </module>
 
